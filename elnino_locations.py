@@ -28,7 +28,7 @@ def unique(lat, lon, locs):
     if (len(locs) == 0):
         locs.append(Loc(lat, lon))
     for x in locs:
-        if (lat == x.lat or lon == x.lon):
+        if (lat == x.lat and lon == x.lon):
             count = 1
             break
     if (count == 0):
