@@ -138,3 +138,25 @@ PRIMARY KEY(ID),
 FOREIGN KEY (dates_ID) REFERENCES Dates(ID),
 FOREIGN KEY (location_ID) REFERENCES Location(ID)
 );
+
+CREATE TABLE Arctic_See_Ice_Grow (
+    DAYAndYear int NOT NULL ,
+    Northern_Hemisphere double(12,2),
+    Beaufort_Sea double(12,2),
+    Chukchi_Sea double(12,2),
+    East_Siberian_Sea double(12,2),
+    Laptev_Sea double(12,2),
+    Kara_Sea double(12,2),
+    Barents_Sea double(12,2),
+    Greenland_Sea double(12,2),
+    Baffin_Bay_Gulf_of_St_Lawrence double(12,2),
+    Canadian_Archipelago double(12,2),
+    Hudson_Bay double(12,2),
+    Central_Arctic double(12,2),
+    Bering_Sea double(12,2),
+    Baltic_Sea double(12,2),
+    Sea_of_Okhotsk double(12,2),
+    Yellow_Sea double(12,2),
+    Cook_Inlet double(12,2),
+    PRIMARY KEY (DAYAndYear)
+);
