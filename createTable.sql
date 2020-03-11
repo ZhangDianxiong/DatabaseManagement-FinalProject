@@ -11,9 +11,9 @@ PRIMARY KEY(id, City, Latitude, Longitude)
 
 CREATE TABLE Dates (
 ID int NOT NULL AUTO_INCREMENT,
-Years TINYINT(4),
-Months TINYINT(2),
-Days TINYINT(2),
+Years INT,
+Months INT,
+Days INT,
 PRIMARY KEY(ID)
 );
 
@@ -140,7 +140,7 @@ FOREIGN KEY (location_ID) REFERENCES Location(ID)
 );
 
 CREATE TABLE Arctic_See_Ice_Grow (
-    DAYAndYear int NOT NULL ,
+    dates_ID int NOT NULL ,
     Northern_Hemisphere double(12,2),
     Beaufort_Sea double(12,2),
     Chukchi_Sea double(12,2),
@@ -158,5 +158,5 @@ CREATE TABLE Arctic_See_Ice_Grow (
     Sea_of_Okhotsk double(12,2),
     Yellow_Sea double(12,2),
     Cook_Inlet double(12,2),
-    PRIMARY KEY (DAYAndYear)
+    PRIMARY KEY (dates_ID)
 );
