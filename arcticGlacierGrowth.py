@@ -7,9 +7,9 @@ import csv
 import pandas as pd
 # set up connection to the php server
 connection = mysql.connector.connect(host='classmysql.engr.oregonstate.edu',
-                                     user='cs440_zhangdi',
-                                     password="Xiong-_240785",
-                                     db="cs440_zhangdi")
+                                     user='',
+                                     password="",
+                                     db="")
 # build a cursor based on connection
 cursor = connection.cursor()
 
