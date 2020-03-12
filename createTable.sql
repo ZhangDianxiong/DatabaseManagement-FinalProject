@@ -182,3 +182,12 @@ CREATE TABLE Arctic_See_Ice_Grow (
     Cook_Inlet double(12,2),
     PRIMARY KEY (dates_ID)
 );
+
+CREATE TABLE WBAN_Weather_Station (
+ID int NOT NULL AUTO_INCREMENT,
+location_ID int NOT NULL,
+station_ID int NOT NULL UNIQUE,
+PRIMARY KEY (ID),
+FOREIGN KEY (location_ID) REFERENCES Location(ID)
+);
+
