@@ -9,9 +9,9 @@ import calendar
 
 # set up connection to the php server
 connection = mysql.connector.connect(host='classmysql.engr.oregonstate.edu',
-                                     user='cs440_zhangdi',
-                                     password="Xiong-_240785",
-                                     db="cs440_zhangdi")
+                                     user='cs440_group15',
+                                     password="49hjP8ML4uQq",
+                                     db="cs440_group15")
 # build a cursor based on connection
 cursor = connection.cursor()
 
@@ -29,7 +29,7 @@ def readFile():
             print("Loading row #{}/5139".format(counter))
             uploadToDB(rows)
             counter += 1
-        print("finish loading data to the data base")
+        print("finish loading data to the database")
 
 
 def uploadToDB(rows):
