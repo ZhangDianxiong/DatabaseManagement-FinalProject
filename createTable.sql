@@ -19,6 +19,18 @@ UNIQUE(Years, Months, Days),
 PRIMARY KEY(ID)
 );
 
+CREATE TABLE Humidity (
+ID int NOT NULL AUTO_INCREMENT,
+dates_ID int NOT NULL,
+location_ID int NOT NULL,
+hour int NOT NULL,
+humidity Double(3,1) NOT NULL,
+PRIMARY KEY (ID),
+FOREIGN KEY (location_ID) REFERENCES Location(ID),
+FOREIGN KEY (dates_ID) REFERENCES Dates(ID),
+CONSTRAINT date_time_loc UNIQUE(location_ID,dates_ID,hour)
+);
+
 CREATE TABLE Weather(
 ID int NOT NULL AUTO_INCREMENT,
 dates_ID int NOT NULL, 
@@ -135,6 +147,18 @@ Snow_depth double(3,2),
 PRIMARY KEY(ID),
 FOREIGN KEY (dates_ID) REFERENCES Dates(ID),
 FOREIGN KEY (location_ID) REFERENCES Location(ID)
+);
+
+CREATE TABLE Weather_Description (
+ID int NOT NULL AUTO_INCREMENT,
+dates_ID int NOT NULL,
+location_ID int NOT NULL,
+hour int NOT NULL,
+description varchar(100),
+PRIMARY KEY (ID),
+FOREIGN KEY (location_ID) REFERENCES Location(ID),
+FOREIGN KEY (dates_ID) REFERENCES Dates(ID),
+CONSTRAINT date_time_loc UNIQUE(location_ID,dates_ID,hour)
 );
 
 CREATE TABLE Arctic_See_Ice_Grow (
