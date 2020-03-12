@@ -9,9 +9,9 @@ import calendar
 
 # set up connection to the php server
 connection = mysql.connector.connect(host='classmysql.engr.oregonstate.edu',
-                                     user='cs440_group15',
-                                     password="49hjP8ML4uQq",
-                                     db="cs440_group15")
+                                     user='',
+                                     password="",
+                                     db="")
 # build a cursor based on connection
 cursor = connection.cursor()
 
